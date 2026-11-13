@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aqua PC Solutions | Interactive 3D PC Builder, Video Lab & Official Launchpad</title>
+  <meta
+    name="description"
+    content="Build your custom gaming PC in real-time 3D, watch step-by-step hardware assembly, explore HD lab videos, and launch directly into Aqua PC Solutions (aquapcsolutions.yyth.workers.dev)."
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle Ambient Floating Particles -->
+  <canvas id="bg-ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Hyperspace Warp Redirection Overlay -->
+  <div id="warp-overlay" aria-hidden="true">
+    <div class="warp-ring"></div>
+    <p
+      style="
+        font-family: var(--font-mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        color: var(--cyan);
+        text-transform: uppercase;
+        margin-bottom: 0.45rem;
+      "
+    >
+      LAUNCHING OFFICIAL STOREFRONT
+    </p>
+    <h2
+      style="
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      "
+    >
+      Redirecting to Aqua PC Solutions
+    </h2>
+    <code
+      id="warp-destination-url"
+      style="
+        font-family: var(--font-mono);
+        font-size: 0.84rem;
+        color: #94a3b8;
+        background: rgba(15, 23, 42, 0.85);
+        padding: 0.4rem 0.9rem;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 242, 254, 0.3);
+      "
+    >
+      https://aquapcsolutions.yyth.workers.dev/
+    </code>
+  </div>
+
+  <!-- Top Floating Navigation & Auto-Redirect Command Bar -->
+  <header class="top-nav">
+    <a href="https://aquapcsolutions.yyth.workers.dev/" data-portal-path="/" class="brand-cluster">
+      <div class="brand-orb">
+        <span class="material-symbols-outlined" style="color: var(--cyan); font-size: 22px">water_drop</span>
+      </div>
+      <div>
+        <div class="brand-title">
+          <span>Aqua PC Solutions</span>
+          <span class="brand-badge">3D BUILD STUDIO</span>
+        </div>
+        <span class="brand-sub">EST. 11.06.2026 · EMBILIPITIYA, SRI LANKA</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" aria-label="Portal sections">
+      <a href="#hero" class="nav-link active">Showreel</a>
+      <a href="#pc-builder-studio" class="nav-link">3D PC Builder</a>
+      <a href="#video-showcase" class="nav-link">Lab Gallery</a>
+      <a href="#portal-matrix" class="nav-link">Storefront Portals</a>
+    </nav>
+
+    <div class="nav-controls">
+      <!-- Auto-Redirect Countdown Pill -->
+      <div class="redirect-pill" title="Auto-redirect pauses automatically while you use the 3D PC Builder">
+        <div class="countdown-ring-wrap">
+          <svg class="countdown-svg" viewBox="0 0 26 26">
+            <circle class="countdown-circle-bg" cx="13" cy="13" r="11"></circle>
+            <circle id="countdown-circle-fg" class="countdown-circle-fg" cx="13" cy="13" r="11"></circle>
+          </svg>
+          <span id="countdown-num" class="countdown-num">45s</span>
+        </div>
+        <span id="pill-status-text" class="pill-label">AUTO-LAUNCH 45S</span>
+        <button id="toggle-countdown-btn" class="pill-toggle-btn" type="button">PAUSE</button>
+      </div>
+
+      <!-- Sound FX Toggle -->
+      <button
+        id="sfx-toggle-btn"
+        class="icon-btn"
+        type="button"
+        title="Toggle UI Sound Effects"
+        aria-label="Toggle UI Sound Effects"
+      >
+        <span class="material-symbols-outlined" style="font-size: 19px">volume_off</span>
+      </button>
+
+      <!-- Instant Launch CTA -->
+      <a
+        href="https://aquapcsolutions.yyth.workers.dev/"
+        data-portal-path="/"
+        class="btn-enter-now"
+      >
+        <span>ENTER MAIN SITE</span>
+        <span class="material-symbols-outlined" style="font-size: 18px">rocket_launch</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         SECTION 1: PHOTOREALISTIC STUDIO & HD VIDEO SHOWREEL HERO
+         ==================================================================== -->
+    <section id="hero" class="hero-cinema">
+      <div class="hero-backdrop-media" aria-hidden="true">
+        <img src="assets/hero-rig.jpg" alt="" class="hero-backdrop-img" />
+        <video
+          src="assets/video/pc-internals.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-backdrop-video"
+        ></video>
+        <div class="hero-backdrop-gradient"></div>
+      </div>
+
+      <div class="section-container">
+        <div class="hero-content-wrap">
+          <!-- Left Column: Headline & Direct Launch CTAs -->
+          <div>
+            <div class="status-eyebrow">
+              <span class="live-dot"></span>
+              <span>INTERACTIVE 3D PC CONFIGURATOR &amp; OFFICIAL LAUNCHPAD</span>
+            </div>
+
+            <h1 class="hero-headline">
+              CRAFTED IN <span class="gradient-text">TEMPERED GLASS</span> &amp; LIQUID SILICON.
+            </h1>
+
+            <p class="hero-lead">
+              Assemble your custom dream rig part-by-part in our interactive 3D studio below, watch
+              real hardware bench footage from our ESD-safe lab, or enter the official
+              <strong>Aqua PC Solutions</strong> storefront (`aquapcsolutions.yyth.workers.dev`).
+            </p>
+
+            <div class="hero-cta-group">
+              <a
+                href="https://aquapcsolutions.yyth.workers.dev/"
+                data-portal-path="/"
+                class="btn-primary-warp"
+              >
+                <span class="material-symbols-outlined">rocket_launch</span>
+                <span>ENTER MAIN STOREFRONT</span>
+                <span class="material-symbols-outlined">arrow_outward</span>
+              </a>
+
+              <a href="#pc-builder-studio" class="btn-secondary-glass">
+                <span class="material-symbols-outlined" style="color: var(--cyan)">view_in_ar</span>
+                <span>BUILD YOUR PC IN 3D &darr;</span>
+              </a>
+
+              <a
+                href="https://aquapcsolutions.yyth.workers.dev/shop"
+                data-portal-path="/shop"
+                class="btn-secondary-glass"
+              >
+                <span class="material-symbols-outlined" style="color: var(--teal)">inventory_2</span>
+                <span>210+ PARTS CATALOG</span>
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-card" data-tilt-3d>
+                <div class="metric-val">210+</div>
+                <div class="metric-label">Grade-A Parts</div>
+              </div>
+              <div class="metric-card" data-tilt-3d>
+                <div class="metric-val">06 MO</div>
+                <div class="metric-label">Testing Warranty</div>
+              </div>
+              <div class="metric-card" data-tilt-3d>
+                <div class="metric-val">24 HR</div>
+                <div class="metric-label">Stress Verified</div>
+              </div>
+              <div class="metric-card" data-tilt-3d>
+                <div class="metric-val">100%</div>
+                <div class="metric-label">Island-Wide Delivery</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Multi-Clip HD Hardware Video Showreel Player -->
+          <div class="hero-reel-card" data-tilt-3d>
+            <div class="hero-reel-video-wrap">
+              <video
+                id="hero-reel-video"
+                src="assets/video/pc-internals.mp4"
+                poster="assets/hero-rig.jpg"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+              <div class="hero-reel-overlay">
+                <div style="display: flex; justify-content: space-between; align-items: center">
+                  <span class="brand-badge">HD HARDWARE REEL</span>
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 0.68rem;
+                      color: #e2e8f0;
+                      background: rgba(3, 6, 14, 0.75);
+                      padding: 0.25rem 0.6rem;
+                      border-radius: 6px;
+                    "
+                  >
+                    AQUA LAB // EMBILIPITIYA
+                  </span>
+                </div>
+
+                <div>
+                  <h2
+                    id="hero-reel-title"
+                    style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; margin-bottom: 0.2rem"
+                  >
+                    01 // Custom Rig Internals &amp; Airflow Bench
+                  </h2>
+                  <p id="hero-reel-sub" style="font-size: 0.8rem; color: #cbd5e1">
+                    Close-up inspection of active cooling fans, VRM heatsinks, and braided power delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 Real Local Video Switcher Buttons -->
+            <div class="hero-reel-thumbs">
+              <button
+                type="button"
+                class="reel-thumb-btn active"
+                data-reel-src="assets/video/pc-internals.mp4"
+                data-reel-title="01 // Custom Rig Internals & Airflow Bench"
+                data-reel-sub="Close-up inspection of active cooling fans, VRM heatsinks, and braided power delivery."
+              >
+                <strong style="display: block; color: var(--cyan)">CLIP 01</strong>
+                <span>Rig Internals</span>
+              </button>
+
+              <button
+                type="button"
+                class="reel-thumb-btn"
+                data-reel-src="assets/video/cpu-board.mp4"
+                data-reel-title="02 // High-Tech Processor & Motherboard Matrix"
+                data-reel-sub="Socket architecture, PCIe Gen5 lanes, and multi-phase VRM power delivery."
+              >
+                <strong style="display: block; color: var(--cyan)">CLIP 02</strong>
+                <span>CPU &amp; Board</span>
+              </button>
+
+              <button
+                type="button"
+                class="reel-thumb-btn"
+                data-reel-src="assets/video/microchip.mp4"
+                data-reel-title="03 // Silicon Die & BGA Micro-Inspection"
+                data-reel-sub="Grade-A component verification and SMD circuit diagnostics before dispatch."
+              >
+                <strong style="display: block; color: var(--cyan)">CLIP 03</strong>
+                <span>Silicon Macro</span>
+              </button>
+
+              <button
+                type="button"
+                class="reel-thumb-btn"
+                data-reel-src="assets/video/tech-workshop.mp4"
+                data-reel-title="04 // ESD-Safe Diagnostic & Repair Lab"
+                data-reel-sub="Precision workstation assembly, thermal repasting, and 24-hour stability testing."
+              >
+                <strong style="display: block; color: var(--cyan)">CLIP 04</strong>
+                <span>ESD Workshop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: INTERACTIVE 3D PC BUILDER & STEP-BY-STEP ASSEMBLY STUDIO
+         ==================================================================== -->
+    <section id="pc-builder-studio" class="builder-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="status-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 16px">view_in_ar</span>
+            <span>REAL-TIME 3D CUSTOM PC CONFIGURATOR &amp; STEP-BY-STEP BUILDER</span>
+          </div>
+          <h2 class="section-title">
+            INTERACTIVE <span class="gradient-text">3D PC BUILD STUDIO</span>
+          </h2>
+          <p class="section-desc">
+            Click directly on any 3D component inside the PC to inspect or swap it, choose a 1-click
+            dream build preset below, or watch the rig assemble step-by-step on our ESD-safe workbench.
+          </p>
+
+          <!-- 1-Click Quick Build Presets Bar -->
+          <div class="quick-presets-bar" role="group" aria-label="1-Click Complete PC Build Presets">
+            <span class="quick-presets-label">1-CLICK 3D RIG PRESETS:</span>
+            <button type="button" class="preset-rig-btn active" data-rig-preset="flagship-4k">
+              <span class="preset-rig-icon">&#9889;</span>
+              <div>
+                <strong>4K Hydro Flagship</strong>
+                <small>i9-14900K · RTX 4090 · 360mm LCD</small>
+              </div>
+            </button>
+            <button type="button" class="preset-rig-btn" data-rig-preset="esports-540">
+              <span class="preset-rig-icon">&#127942;</span>
+              <div>
+                <strong>Esports 540Hz Pro</strong>
+                <small>Ryzen 7 7800X3D · RTX 4080S · 240mm</small>
+              </div>
+            </button>
+            <button type="button" class="preset-rig-btn" data-rig-preset="glacier-white">
+              <span class="preset-rig-icon">&#10052;</span>
+              <div>
+                <strong>Glacier White Showcase</strong>
+                <small>Ryzen 9 7950X3D · Vertical 4090 · White</small>
+              </div>
+            </button>
+            <button type="button" class="preset-rig-btn" data-rig-preset="creator-ai">
+              <span class="preset-rig-icon">&#127912;</span>
+              <div>
+                <strong>Creator &amp; AI Studio</strong>
+                <small>i7-14700K · RTX 4070S · Dual-Tower Air</small>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="builder-studio-grid">
+          <!-- LEFT COLUMN: Sticky 3D WebGL Viewport & Assembly Stepper -->
+          <div id="builder-stage-card" class="builder-stage-card">
+            <!-- Top Bar: Step-by-Step Build Progress (Steps 1–8) + Guided Controls -->
+            <div class="builder-stage-top">
+              <div class="step-pills-row" role="group" aria-label="PC Assembly Steps">
+                <button type="button" class="step-pill completed" data-build-step="1">1. Case</button>
+                <button type="button" class="step-pill completed" data-build-step="2">2. Mobo</button>
+                <button type="button" class="step-pill completed" data-build-step="3">3. CPU</button>
+                <button type="button" class="step-pill completed" data-build-step="4">4. NVMe</button>
+                <button type="button" class="step-pill completed" data-build-step="5">5. DDR5</button>
+                <button type="button" class="step-pill completed" data-build-step="6">6. Cooler</button>
+                <button type="button" class="step-pill completed" data-build-step="7">7. GPU</button>
+                <button type="button" class="step-pill active" data-build-step="8">8. Power ON</button>
+              </div>
+
+              <div class="step-wizard-controls">
+                <button id="btn-prev-step" type="button" class="pill-toggle-btn" title="Previous Assembly Step">&larr; Prev</button>
+                <button id="btn-next-step" type="button" class="pill-toggle-btn" title="Next Assembly Step">Next &rarr;</button>
+                <button id="btn-auto-build" type="button" class="pill-toggle-btn" style="border-color: var(--cyan); color: var(--cyan)">
+                  &#9654; AUTO-BUILD
+                </button>
+              </div>
+            </div>
+
+            <!-- 3D WebGL Canvas -->
+            <div class="canvas-viewport-wrap">
+              <canvas id="pc-builder-canvas"></canvas>
+
+              <!-- Direct 3D Raycast Hover Inspection Tooltip -->
+              <div id="viewport-hover-tooltip" class="viewport-hover-tooltip" aria-hidden="true">
+                <div class="hover-tooltip-kicker">3D HARDWARE RAYCAST // CLICK TO CUSTOMIZE</div>
+                <div id="hover-tooltip-title" class="hover-tooltip-title">NVIDIA RTX 4090 24GB</div>
+                <div id="hover-tooltip-sub" class="hover-tooltip-sub">Click to swap model or mount</div>
+              </div>
+
+              <!-- Projected 3D Hardware Callout Pins -->
+              <div class="viewport-pins-layer">
+                <button type="button" class="pin-3d-tag" data-pin-anchor="cpu" data-cam-preset="cpu" data-quick-cat="cpu">
+                  <span class="pin-3d-dot"></span>
+                  <span>CRYO LCD &amp; CPU</span>
+                </button>
+                <button type="button" class="pin-3d-tag" data-pin-anchor="ram" data-cam-preset="ram" data-quick-cat="ram">
+                  <span class="pin-3d-dot"></span>
+                  <span>DDR5-6400 ARGB</span>
+                </button>
+                <button type="button" class="pin-3d-tag" data-pin-anchor="gpu" data-cam-preset="gpu" data-quick-cat="gpu">
+                  <span class="pin-3d-dot"></span>
+                  <span>PCIe 5.0 GPU</span>
+                </button>
+                <button type="button" class="pin-3d-tag" data-pin-anchor="radiator" data-cam-preset="cooling" data-quick-cat="cooler">
+                  <span class="pin-3d-dot"></span>
+                  <span>HYDRO RADIATOR</span>
+                </button>
+                <button type="button" class="pin-3d-tag" data-pin-anchor="psu" data-cam-preset="psu" data-quick-cat="theme">
+                  <span class="pin-3d-dot"></span>
+                  <span>1000W ATX 3.1 PSU</span>
+                </button>
+              </div>
+
+              <div id="builder-step-status" class="viewport-floating-badge">
+                ESD-Safe Bay #01 · Click Any 3D Part to Inspect/Swap or Drag 360&deg; to Orbit
+              </div>
+
+              <!-- RGB Lighting Swatch Bar -->
+              <div class="viewport-rgb-bar" aria-label="ARGB Lighting Color">
+                <span style="font-family: var(--font-mono); font-size: 0.64rem; color: #cbd5e1; margin-right: 0.2rem">ARGB</span>
+                <button type="button" class="rgb-swatch active" data-rgb="#00f2fe" style="background: #00f2fe" title="Aqua Cyan"></button>
+                <button type="button" class="rgb-swatch" data-rgb="#10b981" style="background: #10b981" title="Cryo Emerald"></button>
+                <button type="button" class="rgb-swatch" data-rgb="#f43f5e" style="background: #f43f5e" title="Cyber Crimson"></button>
+                <button type="button" class="rgb-swatch" data-rgb="#a855f7" style="background: #a855f7" title="Ultraviolet"></button>
+                <button type="button" class="rgb-swatch" data-rgb="#f59e0b" style="background: #f59e0b" title="Solar Amber"></button>
+                <button
+                  type="button"
+                  class="rgb-swatch"
+                  data-rgb="rainbow"
+                  style="background: conic-gradient(#00f2fe, #10b981, #f59e0b, #f43f5e, #a855f7, #00f2fe)"
+                  title="Rainbow Wave"
+                ></button>
+              </div>
+
+              <!-- Floating Zoom & Fullscreen 3D Controls -->
+              <div class="viewport-zoom-controls">
+                <button id="btn-zoom-in" type="button" class="viewport-ctrl-btn" title="Zoom In (+)">+</button>
+                <button id="btn-zoom-out" type="button" class="viewport-ctrl-btn" title="Zoom Out (-)">&minus;</button>
+                <button id="btn-reset-cam" type="button" class="viewport-ctrl-btn" title="Reset 3D Camera">&#8634;</button>
+                <button id="btn-fullscreen-3d" type="button" class="viewport-ctrl-btn" title="Toggle Fullscreen 3D Studio">&#9974;</button>
+              </div>
+
+              <!-- In-Viewport Quick-Swap HUD Drawer (Appears when clicking a 3D part) -->
+              <div id="viewport-quick-swap" class="viewport-quick-swap">
+                <div class="quick-swap-header">
+                  <span id="quick-swap-label">SELECTED 3D COMPONENT // GRAPHICS CARD</span>
+                  <button id="quick-swap-close" type="button" class="quick-swap-close" title="Close">&times;</button>
+                </div>
+                <div id="quick-swap-options" class="quick-swap-options"></div>
+              </div>
+            </div>
+
+            <!-- Bottom Bar: Camera Hotspots & Interactive View Toggles -->
+            <div class="builder-stage-bottom">
+              <div class="cam-preset-group">
+                <button type="button" class="pill-toggle-btn active" data-cam-preset="full">Full Rig</button>
+                <button type="button" class="pill-toggle-btn" data-cam-preset="bay">ESD Bay Wide</button>
+                <button type="button" class="pill-toggle-btn" data-cam-preset="cpu">CPU &amp; LCD</button>
+                <button type="button" class="pill-toggle-btn" data-cam-preset="gpu">GPU &amp; PCIe</button>
+                <button type="button" class="pill-toggle-btn" data-cam-preset="ram">DDR5 RAM</button>
+                <button type="button" class="pill-toggle-btn" data-cam-preset="cooling">Radiator</button>
+                <button type="button" class="pill-toggle-btn" data-cam-preset="psu">PSU Shroud</button>
+              </div>
+
+              <div class="view-toggle-group">
+                <button id="btn-toggle-bay" type="button" class="pill-toggle-btn active">ESD Bench</button>
+                <button id="btn-toggle-exploded" type="button" class="pill-toggle-btn">Exploded View</button>
+                <button id="btn-toggle-glass" type="button" class="pill-toggle-btn">Open Glass</button>
+                <button id="btn-toggle-airflow" type="button" class="pill-toggle-btn">3D Airflow</button>
+                <button id="btn-toggle-power" type="button" class="pill-toggle-btn active">&#9889; POWER: ON</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Real-Time Component Selector & FPS Benchmark Estimator -->
+          <div class="builder-config-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem">
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.66rem; color: var(--cyan)">CUSTOMIZE HARDWARE</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800">Select Components</h3>
+              </div>
+              <span id="build-wattage-val" class="brand-badge">EST. LOAD: 788W</span>
+            </div>
+
+            <!-- 1. Processor (CPU) -->
+            <div class="config-group" data-config-section="cpu">
+              <div class="config-label">
+                <span>01 // PROCESSOR &amp; PLATFORM</span>
+                <span>LGA1700 / AM5</span>
+              </div>
+              <div class="part-options-grid">
+                <button type="button" class="part-option-btn active" data-part-cat="cpu" data-part-val="i9-14900k">
+                  <span>Intel Core i9-14900K</span>
+                  <small>24 Cores · 6.0 GHz · Z790</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="cpu" data-part-val="ryzen-7950x3d">
+                  <span>AMD Ryzen 9 7950X3D</span>
+                  <small>16 Cores · 3D V-Cache · X670E</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="cpu" data-part-val="i7-14700k">
+                  <span>Intel Core i7-14700K</span>
+                  <small>20 Cores · 5.6 GHz · Z790</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="cpu" data-part-val="ryzen-7800x3d">
+                  <span>AMD Ryzen 7 7800X3D</span>
+                  <small>8 Cores · Gaming King · B650E</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. CPU Cooling System -->
+            <div class="config-group" data-config-section="cooler">
+              <div class="config-label">
+                <span>02 // THERMAL COOLING ARCHITECTURE</span>
+                <span>AIO LCD / AIR</span>
+              </div>
+              <div class="part-options-grid">
+                <button type="button" class="part-option-btn active" data-part-cat="cooler" data-part-val="aio360">
+                  <span>360mm Hydro LCD AIO</span>
+                  <small>Triple 120mm ARGB · Live Temp LCD</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="cooler" data-part-val="aio240">
+                  <span>240mm Hydro LCD AIO</span>
+                  <small>Dual 120mm ARGB · Braided Loop</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="cooler" data-part-val="air" style="grid-column: span 2">
+                  <span>Aqua Dual-Tower 6-Heatpipe Air Cooler</span>
+                  <small>36 Aluminum Fins · Nickel-Plated Copper Heatpipes</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. Graphics Card (GPU) -->
+            <div class="config-group" data-config-section="gpu">
+              <div class="config-label">
+                <span>03 // GRAPHICS ACCELERATOR (VGA)</span>
+                <span>PCIe 5.0 x16</span>
+              </div>
+              <div class="part-options-grid">
+                <button type="button" class="part-option-btn active" data-part-cat="gpu" data-part-val="rtx4090">
+                  <span>NVIDIA RTX 4090 24GB</span>
+                  <small>Triple-Axial · 24GB GDDR6X</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="gpu" data-part-val="rtx4080s">
+                  <span>RTX 4080 SUPER 16GB</span>
+                  <small>Triple-Axial · 4K Ultra</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="gpu" data-part-val="rtx4070s">
+                  <span>RTX 4070 SUPER 12GB</span>
+                  <small>Triple-Axial · 1440p Max</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="gpu" data-part-val="rx7800xt">
+                  <span>Radeon RX 7800 XT 16GB</span>
+                  <small>Triple-Axial · RDNA 3</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- 4. GPU Orientation & DDR5 Memory -->
+            <div class="config-group" data-config-section="ram">
+              <div class="config-label">
+                <span>04 // GPU MOUNT &amp; DDR5 MEMORY</span>
+                <span>DUAL / QUAD DIMM</span>
+              </div>
+              <div class="part-options-grid">
+                <button type="button" class="part-option-btn active" data-part-cat="gpuMount" data-part-val="horizontal">
+                  <span>Horizontal PCIe Mount</span>
+                  <small>Direct Motherboard Slot</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="gpuMount" data-part-val="vertical">
+                  <span>Vertical Showcase Mount</span>
+                  <small>Gen4 Riser · Face Forward</small>
+                </button>
+                <button type="button" class="part-option-btn active" data-part-cat="ram" data-part-val="64gb-4x16">
+                  <span>64GB (4&times;16GB) DDR5-6400</span>
+                  <small>4 Full ARGB DIMM Slots</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="ram" data-part-val="32gb-2x16">
+                  <span>32GB (2&times;16GB) DDR5-6400</span>
+                  <small>Dual-Channel A2/B2</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- 5. Chassis Finish & PSU -->
+            <div class="config-group" data-config-section="theme">
+              <div class="config-label">
+                <span>05 // CHASSIS FINISH &amp; MODULAR PSU</span>
+                <span>ATX 3.1</span>
+              </div>
+              <div class="part-options-grid">
+                <button type="button" class="part-option-btn active" data-part-cat="theme" data-part-val="black">
+                  <span>Obsidian Black Chassis</span>
+                  <small>Stealth Matte + Dark Sleeves</small>
+                </button>
+                <button type="button" class="part-option-btn" data-part-cat="theme" data-part-val="white">
+                  <span>Glacier White Chassis</span>
+                  <small>Arctic White + White Sleeves</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- Live Game FPS Benchmark Estimator -->
+            <div class="fps-benchmark-box">
+              <div class="fps-row">
+                <div class="fps-row-header">
+                  <span>Cyberpunk 2077 (Ray Tracing Overdrive)</span>
+                  <strong id="fps-cp2077-val" style="color: var(--cyan)">138 FPS (4K DLSS/FSR)</strong>
+                </div>
+                <div class="fps-bar-track">
+                  <div id="fps-cp2077-bar" class="fps-bar-fill" style="width: 95%"></div>
+                </div>
+              </div>
+
+              <div class="fps-row">
+                <div class="fps-row-header">
+                  <span>Counter-Strike 2 / Valorant Esports</span>
+                  <strong id="fps-cs2-val" style="color: var(--teal)">540 FPS (1440p Comp)</strong>
+                </div>
+                <div class="fps-bar-track">
+                  <div id="fps-cs2-bar" class="fps-bar-fill" style="width: 96%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div style="display: flex; flex-direction: column; gap: 0.65rem">
+              <button id="btn-whatsapp-build" type="button" class="btn-primary-warp" style="justify-content: center; width: 100%">
+                <span class="material-symbols-outlined">chat</span>
+                <span>ORDER THIS CUSTOM 3D BUILD ON WHATSAPP</span>
+              </button>
+
+              <a
+                href="https://aquapcsolutions.yyth.workers.dev/shop"
+                data-portal-path="/shop"
+                class="btn-secondary-glass"
+                style="justify-content: center; width: 100%"
+              >
+                <span class="material-symbols-outlined" style="color: var(--cyan)">storefront</span>
+                <span>BROWSE ALL 210+ PARTS ON MAIN SITE &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: PHOTOREALISTIC LAB & VIDEO BENTO SHOWCASE
+         ==================================================================== -->
+    <section id="video-showcase" class="builder-section" style="padding-top: 1rem">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="status-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 16px">movie</span>
+            <span>STUDIO PHOTOGRAPHY &amp; LIVE LAB FOOTAGE</span>
+          </div>
+          <h2 class="section-title">
+            PRECISION <span class="gradient-text">ENGINEERING UP CLOSE</span>
+          </h2>
+          <p class="section-desc">
+            Every graphics card, processor, custom water loop, and motherboard repair is handled in
+            our ESD-safe Embilipitiya workshop. Click any showcase card to jump directly into the
+            matching section on <code>aquapcsolutions.yyth.workers.dev</code>.
+          </p>
+        </div>
+
+        <div class="bento-gallery-grid">
+          <!-- Card 1: GPU Installation Photo + Video Hover -->
+          <a
+            href="https://aquapcsolutions.yyth.workers.dev/shop?category=vga-cards"
+            data-portal-path="/shop?category=vga-cards"
+            class="bento-card bento-span-7"
+            data-tilt-3d
+          >
+            <img src="assets/lab-gpu-install.jpg" alt="Graphics card installation in ESD-safe lab" class="bento-media" />
+            <div class="bento-overlay">
+              <span class="bento-kicker">CERTIFIED GRAPHICS CARDS // 06-MONTH WARRANTY</span>
+              <h3 class="bento-title">NVIDIA RTX 20 / 30 / 40 &amp; Radeon RX Series</h3>
+              <p class="bento-desc">
+                Every GPU is FurMark &amp; 3DMark stress-verified for thermal delta, coil whine, and
+                VRAM stability before entering our catalog.
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 2: Cryo Waterblock Macro -->
+          <a
+            href="https://aquapcsolutions.yyth.workers.dev/services#srv-02"
+            data-portal-path="/services"
+            class="bento-card bento-span-5"
+            data-tilt-3d
+          >
+            <img src="assets/cooling-loop.jpg" alt="Custom liquid cooling hardline loop" class="bento-media" />
+            <div class="bento-overlay">
+              <span class="bento-kicker">HYDRO THERMAL LAB // CUSTOM LOOPS</span>
+              <h3 class="bento-title">Hardline &amp; AIO Liquid Cooling</h3>
+              <p class="bento-desc">
+                Pressure-tested custom acrylic tubing, D5 pump calibration, and whisper-quiet thermal curves.
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 3: Micro-Soldering Repair Photo -->
+          <a
+            href="https://aquapcsolutions.yyth.workers.dev/services#srv-01"
+            data-portal-path="/services"
+            class="bento-card bento-span-4"
+            data-tilt-3d
+          >
+            <img src="assets/micro-solder.jpg" alt="Board-level micro-soldering repair" class="bento-media" />
+            <div class="bento-overlay">
+              <span class="bento-kicker">MICRO-PRECISION DIAGNOSTICS</span>
+              <h3 class="bento-title">Board-Level BGA &amp; SMD Repair</h3>
+              <p class="bento-desc">
+                Oscilloscope power-rail tracing, MOSFET replacement, and BIOS EEPROM recovery.
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 4: DDR5 RGB Macro Photo -->
+          <a
+            href="https://aquapcsolutions.yyth.workers.dev/shop?category=ram"
+            data-portal-path="/shop?category=ram"
+            class="bento-card bento-span-4"
+            data-tilt-3d
+          >
+            <img src="assets/rgb-ram-macro.jpg" alt="DDR5 RGB Memory modules" class="bento-media" />
+            <div class="bento-overlay">
+              <span class="bento-kicker">MEMORY &amp; STORAGE</span>
+              <h3 class="bento-title">DDR4 / DDR5 RAM &amp; Gen4 NVMe SSDs</h3>
+              <p class="bento-desc">
+                MemTest86 certified memory kits and 100%-health SMART verified NVMe drives.
+              </p>
+            </div>
+          </a>
+
+          <!-- Card 5: Live Looping Circuit Board Video Card -->
+          <a
+            href="https://aquapcsolutions.yyth.workers.dev/shop?category=motherboards"
+            data-portal-path="/shop?category=motherboards"
+            class="bento-card bento-span-4"
+            data-tilt-3d
+          >
+            <video
+              src="assets/video/circuit-board.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              class="bento-media"
+            ></video>
+            <div class="bento-overlay">
+              <span class="bento-kicker">MOTHERBOARDS &amp; PROCESSORS</span>
+              <h3 class="bento-title">Intel G41–Z790 &amp; AMD AM4 / AM5</h3>
+              <p class="bento-desc">
+                Socket-pin inspected motherboards and bench-tested Intel Core &amp; AMD Ryzen CPUs.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: DIRECT STOREFRONT DESTINATION MATRIX
+         ==================================================================== -->
+    <section id="portal-matrix" class="builder-section" style="padding-top: 1rem">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="status-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 16px">hub</span>
+            <span>DIRECT REDIRECTION PORTALS</span>
+          </div>
+          <h2 class="section-title">
+            ENTER <span class="gradient-text">AQUA PC SOLUTIONS</span>
+          </h2>
+          <p class="section-desc">
+            Select any destination below to launch straight into the corresponding page on
+            <code>https://aquapcsolutions.yyth.workers.dev/</code>.
+          </p>
+        </div>
+
+        <div class="portal-matrix-grid">
+          <a href="https://aquapcsolutions.yyth.workers.dev/" data-portal-path="/" class="portal-card" data-tilt-3d>
+            <div>
+              <div class="portal-card-top">
+                <div class="portal-icon-box"><span class="material-symbols-outlined">home</span></div>
+                <span class="portal-route-tag">ROUTE // /</span>
+              </div>
+              <h3 class="portal-card-title">Main Storefront</h3>
+              <p class="portal-card-desc">
+                Explore the full Aqua PC Solutions homepage, featured hardware categories, and lab overview.
+              </p>
+            </div>
+            <div class="portal-card-footer">
+              <span>LAUNCH HOMEPAGE</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">arrow_outward</span>
+            </div>
+          </a>
+
+          <a href="https://aquapcsolutions.yyth.workers.dev/shop" data-portal-path="/shop" class="portal-card" data-tilt-3d>
+            <div>
+              <div class="portal-card-top">
+                <div class="portal-icon-box"><span class="material-symbols-outlined">shopping_bag</span></div>
+                <span class="portal-route-tag">ROUTE // /shop</span>
+              </div>
+              <h3 class="portal-card-title">210+ Hardware Catalog</h3>
+              <p class="portal-card-desc">
+                Browse Processors, VGA Cards, Motherboards, RAM, SSDs, Power Supplies, and Frameless IPS Monitors.
+              </p>
+            </div>
+            <div class="portal-card-footer">
+              <span>OPEN HARDWARE SHOP</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">arrow_outward</span>
+            </div>
+          </a>
+
+          <a href="https://aquapcsolutions.yyth.workers.dev/services" data-portal-path="/services" class="portal-card" data-tilt-3d>
+            <div>
+              <div class="portal-card-top">
+                <div class="portal-icon-box"><span class="material-symbols-outlined">build_circle</span></div>
+                <span class="portal-route-tag">ROUTE // /services</span>
+              </div>
+              <h3 class="portal-card-title">Precision Lab &amp; Repairs</h3>
+              <p class="portal-card-desc">
+                Book board-level diagnostics, custom PC assembly, liquid cooling loops, and BIOS stability tuning.
+              </p>
+            </div>
+            <div class="portal-card-footer">
+              <span>VIEW LAB SERVICES</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">arrow_outward</span>
+            </div>
+          </a>
+
+          <a href="https://aquapcsolutions.yyth.workers.dev/pricing" data-portal-path="/pricing" class="portal-card" data-tilt-3d>
+            <div>
+              <div class="portal-card-top">
+                <div class="portal-icon-box"><span class="material-symbols-outlined">request_quote</span></div>
+                <span class="portal-route-tag">ROUTE // /pricing</span>
+              </div>
+              <h3 class="portal-card-title">Pricing &amp; Service Tiers</h3>
+              <p class="portal-card-desc">
+                Transparent diagnostic rates, custom build packages, and interactive part quotation tools.
+              </p>
+            </div>
+            <div class="portal-card-footer">
+              <span>CHECK PRICING</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">arrow_outward</span>
+            </div>
+          </a>
+
+          <a href="https://aquapcsolutions.yyth.workers.dev/about" data-portal-path="/about" class="portal-card" data-tilt-3d>
+            <div>
+              <div class="portal-card-top">
+                <div class="portal-icon-box"><span class="material-symbols-outlined">verified_user</span></div>
+                <span class="portal-route-tag">ROUTE // /about</span>
+              </div>
+              <h3 class="portal-card-title">About &amp; QA Standards</h3>
+              <p class="portal-card-desc">
+                Learn about founder S.L.K Thinul Hansana, our 24-hour stability testing protocol, and warranty coverage.
+              </p>
+            </div>
+            <div class="portal-card-footer">
+              <span>ABOUT AQUA PC</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">arrow_outward</span>
+            </div>
+          </a>
+
+          <a href="https://aquapcsolutions.yyth.workers.dev/contact" data-portal-path="/contact" class="portal-card" data-tilt-3d>
+            <div>
+              <div class="portal-card-top">
+                <div class="portal-icon-box"><span class="material-symbols-outlined">support_agent</span></div>
+                <span class="portal-route-tag">ROUTE // /contact</span>
+              </div>
+              <h3 class="portal-card-title">24/7 Workshop &amp; Support</h3>
+              <p class="portal-card-desc">
+                Track active repair tickets, chat with our technician desk, or reach our Embilipitiya workshop.
+              </p>
+            </div>
+            <div class="portal-card-footer">
+              <span>CONTACT WORKSHOP</span>
+              <span class="material-symbols-outlined" style="font-size: 18px">arrow_outward</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Founder & Direct Launch Banner -->
+        <div class="founder-banner" style="margin-top: 2.5rem" data-tilt-3d>
+          <div class="founder-visual">
+            <div class="founder-avatar-frame">
+              <img src="assets/founder.jpg" alt="S.L.K Thinul Hansana — Founder of Aqua PC Solutions" />
+            </div>
+            <div>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan)">
+                FOUNDER &amp; LEAD HARDWARE ENGINEER
+              </span>
+              <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin: 0.2rem 0">
+                S.L.K Thinul Hansana
+              </h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55">
+                Embilipitiya, Sri Lanka · Hotline: <strong style="color: #fff">+94 78 819 4535</strong> ·
+                Every component bench-tested with a 06-Month Testing Warranty.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: flex-end">
+            <a
+              href="https://aquapcsolutions.yyth.workers.dev/"
+              data-portal-path="/"
+              class="btn-primary-warp"
+            >
+              <span>LAUNCH MAIN WEBSITE</span>
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </a>
+
+            <a
+              href="https://wa.me/message/CYZRQDEHLIRZF1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary-glass"
+            >
+              <span class="material-symbols-outlined" style="color: var(--teal)">chat</span>
+              <span>24/7 WHATSAPP DESK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="portal-footer">
+    <div
+      class="section-container"
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem"
+    >
+      <div>
+        <strong>AQUA PC SOLUTIONS</strong> · Interactive 3D PC Builder &amp; Official Launch Portal
+      </div>
+      <div>
+        Destination:
+        <a
+          href="https://aquapcsolutions.yyth.workers.dev/"
+          data-portal-path="/"
+          style="color: var(--cyan); text-decoration: none"
+        >
+          https://aquapcsolutions.yyth.workers.dev/
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Local Vendor & 3D PC Builder Scripts (Zero External Latency) -->
+  <script src="js/vendor/three.min.js"></script>
+  <script src="js/pc-model.js"></script>
+  <script src="scene3d.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
