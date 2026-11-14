@@ -309,7 +309,7 @@
       g.font = "700 22px " + FONT_MONO;
       g.fillText(brand, 24, 62);
       g.font = "800 44px " + FONT_DISPLAY;
-      g.fillText(model, 24, 120);
+      g.fillText(model, 24, 120, w - 48);
       g.font = "600 16px " + FONT_MONO;
       g.fillText("AQUA BENCH CERTIFIED", 24, 168);
       g.fillText("BATCH #LK-2026-A9", 24, 194);
