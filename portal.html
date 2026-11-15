@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aqua PC Solutions | Cinematic Showreel, Video Lab &amp; Storefront Launchpad</title>
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
   <link rel="apple-touch-icon" href="assets/logo.jpg" />
-  <meta
-    name="description"
-    content="Build your custom gaming PC in real-time 3D, watch step-by-step hardware assembly, explore HD lab videos, and launch directly into Aqua PC Solutions (aquapcsolutions.yyth.workers.dev)."
-  />
+  <meta name="description"
+    content="Build your custom gaming PC in real-time 3D, watch step-by-step hardware assembly, explore HD lab videos, and launch directly into Aqua PC Solutions (aquapcsolutions.yyth.workers.dev)." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  />
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- Subtle Ambient Floating Particles -->
   <canvas id="bg-ambient-canvas" aria-hidden="true"></canvas>
@@ -32,31 +29,25 @@
   <!-- Hyperspace Warp Redirection Overlay -->
   <div id="warp-overlay" aria-hidden="true">
     <div class="warp-ring"></div>
-    <p
-      style="
+    <p style="
         font-family: var(--font-mono);
         font-size: 0.76rem;
         letter-spacing: 0.16em;
         color: var(--cyan);
         text-transform: uppercase;
         margin-bottom: 0.45rem;
-      "
-    >
+      ">
       LAUNCHING OFFICIAL STOREFRONT
     </p>
-    <h2
-      style="
+    <h2 style="
         font-family: var(--font-display);
         font-size: clamp(1.5rem, 3vw, 2.2rem);
         font-weight: 800;
         margin-bottom: 0.5rem;
-      "
-    >
+      ">
       Redirecting to Aqua PC Solutions
     </h2>
-    <code
-      id="warp-destination-url"
-      style="
+    <code id="warp-destination-url" style="
         font-family: var(--font-mono);
         font-size: 0.84rem;
         color: #94a3b8;
@@ -64,8 +55,7 @@
         padding: 0.4rem 0.9rem;
         border-radius: 8px;
         border: 1px solid rgba(0, 242, 254, 0.3);
-      "
-    >
+      ">
       https://aquapcsolutions.yyth.workers.dev/
     </code>
   </div>
@@ -88,6 +78,7 @@
     <nav class="nav-links" aria-label="Portal sections">
       <a href="index.html" class="nav-link">3D PC Builder Home</a>
       <a href="https://aquapcparts.pages.dev/" class="nav-link">Aqua PC Parts Store &#8599;</a>
+      <a href="https://aquapcparts.pages.dev/contact.html" class="nav-link">Parts Contact &#8599;</a>
       <a href="#hero" class="nav-link active">Showreel</a>
       <a href="#video-showcase" class="nav-link">Lab Gallery</a>
       <a href="#portal-matrix" class="nav-link">Storefront Portals</a>
@@ -108,22 +99,13 @@
       </div>
 
       <!-- Sound FX Toggle -->
-      <button
-        id="sfx-toggle-btn"
-        class="icon-btn"
-        type="button"
-        title="Toggle UI Sound Effects"
-        aria-label="Toggle UI Sound Effects"
-      >
+      <button id="sfx-toggle-btn" class="icon-btn" type="button" title="Toggle UI Sound Effects"
+        aria-label="Toggle UI Sound Effects">
         <span class="material-symbols-outlined" style="font-size: 19px">volume_off</span>
       </button>
 
       <!-- Instant Launch CTA -->
-      <a
-        href="https://aquapcsolutions.yyth.workers.dev/"
-        data-portal-path="/"
-        class="btn-enter-now"
-      >
+      <a href="https://aquapcsolutions.yyth.workers.dev/" data-portal-path="/" class="btn-enter-now">
         <span>ENTER MAIN SITE</span>
         <span class="material-symbols-outlined" style="font-size: 18px">rocket_launch</span>
       </a>
@@ -137,14 +119,7 @@
     <section id="hero" class="hero-cinema">
       <div class="hero-backdrop-media" aria-hidden="true">
         <img src="assets/hero-rig.jpg" alt="" class="hero-backdrop-img" />
-        <video
-          src="assets/video/pc-internals.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          class="hero-backdrop-video"
-        ></video>
+        <video src="assets/video/pc-internals.mp4" autoplay muted loop playsinline class="hero-backdrop-video"></video>
         <div class="hero-backdrop-gradient"></div>
       </div>
 
@@ -168,11 +143,7 @@
             </p>
 
             <div class="hero-cta-group">
-              <a
-                href="https://aquapcsolutions.yyth.workers.dev/"
-                data-portal-path="/"
-                class="btn-primary-warp"
-              >
+              <a href="https://aquapcsolutions.yyth.workers.dev/" data-portal-path="/" class="btn-primary-warp">
                 <span class="material-symbols-outlined">rocket_launch</span>
                 <span>ENTER MAIN STOREFRONT</span>
                 <span class="material-symbols-outlined">arrow_outward</span>
@@ -183,11 +154,8 @@
                 <span>OPEN 3D PC BUILDING BAY &rarr;</span>
               </a>
 
-              <a
-                href="https://aquapcparts.pages.dev/"
-                data-portal-path="https://aquapcparts.pages.dev/"
-                class="btn-secondary-glass"
-              >
+              <a href="https://aquapcparts.pages.dev/" data-portal-path="https://aquapcparts.pages.dev/"
+                class="btn-secondary-glass">
                 <span class="material-symbols-outlined" style="color: var(--teal)">inventory_2</span>
                 <span>390+ PARTS CATALOG</span>
               </a>
@@ -216,37 +184,26 @@
           <!-- Right Column: Multi-Clip HD Hardware Video Showreel Player -->
           <div class="hero-reel-card" data-tilt-3d>
             <div class="hero-reel-video-wrap">
-              <video
-                id="hero-reel-video"
-                src="assets/video/pc-internals.mp4"
-                poster="assets/hero-rig.jpg"
-                autoplay
-                muted
-                loop
-                playsinline
-              ></video>
+              <video id="hero-reel-video" src="assets/video/pc-internals.mp4" poster="assets/hero-rig.jpg" autoplay
+                muted loop playsinline></video>
               <div class="hero-reel-overlay">
                 <div style="display: flex; justify-content: space-between; align-items: center">
                   <span class="brand-badge">HD HARDWARE REEL</span>
-                  <span
-                    style="
+                  <span style="
                       font-family: var(--font-mono);
                       font-size: 0.68rem;
                       color: #e2e8f0;
                       background: rgba(3, 6, 14, 0.75);
                       padding: 0.25rem 0.6rem;
                       border-radius: 6px;
-                    "
-                  >
+                    ">
                     AQUA LAB // EMBILIPITIYA
                   </span>
                 </div>
 
                 <div>
-                  <h2
-                    id="hero-reel-title"
-                    style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; margin-bottom: 0.2rem"
-                  >
+                  <h2 id="hero-reel-title"
+                    style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; margin-bottom: 0.2rem">
                     01 // Custom Rig Internals &amp; Airflow Bench
                   </h2>
                   <p id="hero-reel-sub" style="font-size: 0.8rem; color: #cbd5e1">
@@ -258,46 +215,30 @@
 
             <!-- 4 Real Local Video Switcher Buttons -->
             <div class="hero-reel-thumbs">
-              <button
-                type="button"
-                class="reel-thumb-btn active"
-                data-reel-src="assets/video/pc-internals.mp4"
+              <button type="button" class="reel-thumb-btn active" data-reel-src="assets/video/pc-internals.mp4"
                 data-reel-title="01 // Custom Rig Internals & Airflow Bench"
-                data-reel-sub="Close-up inspection of active cooling fans, VRM heatsinks, and braided power delivery."
-              >
+                data-reel-sub="Close-up inspection of active cooling fans, VRM heatsinks, and braided power delivery.">
                 <strong style="display: block; color: var(--cyan)">CLIP 01</strong>
                 <span>Rig Internals</span>
               </button>
 
-              <button
-                type="button"
-                class="reel-thumb-btn"
-                data-reel-src="assets/video/cpu-board.mp4"
+              <button type="button" class="reel-thumb-btn" data-reel-src="assets/video/cpu-board.mp4"
                 data-reel-title="02 // High-Tech Processor & Motherboard Matrix"
-                data-reel-sub="Socket architecture, PCIe Gen5 lanes, and multi-phase VRM power delivery."
-              >
+                data-reel-sub="Socket architecture, PCIe Gen5 lanes, and multi-phase VRM power delivery.">
                 <strong style="display: block; color: var(--cyan)">CLIP 02</strong>
                 <span>CPU &amp; Board</span>
               </button>
 
-              <button
-                type="button"
-                class="reel-thumb-btn"
-                data-reel-src="assets/video/microchip.mp4"
+              <button type="button" class="reel-thumb-btn" data-reel-src="assets/video/microchip.mp4"
                 data-reel-title="03 // Silicon Die & BGA Micro-Inspection"
-                data-reel-sub="Grade-A component verification and SMD circuit diagnostics before dispatch."
-              >
+                data-reel-sub="Grade-A component verification and SMD circuit diagnostics before dispatch.">
                 <strong style="display: block; color: var(--cyan)">CLIP 03</strong>
                 <span>Silicon Macro</span>
               </button>
 
-              <button
-                type="button"
-                class="reel-thumb-btn"
-                data-reel-src="assets/video/tech-workshop.mp4"
+              <button type="button" class="reel-thumb-btn" data-reel-src="assets/video/tech-workshop.mp4"
                 data-reel-title="04 // ESD-Safe Diagnostic & Repair Lab"
-                data-reel-sub="Precision workstation assembly, thermal repasting, and 24-hour stability testing."
-              >
+                data-reel-sub="Precision workstation assembly, thermal repasting, and 24-hour stability testing.">
                 <strong style="display: block; color: var(--cyan)">CLIP 04</strong>
                 <span>ESD Workshop</span>
               </button>
@@ -329,13 +270,10 @@
 
         <div class="bento-gallery-grid">
           <!-- Card 1: GPU Installation Photo + Video Hover -->
-          <a
-            href="https://aquapcsolutions.yyth.workers.dev/shop?category=vga-cards"
-            data-portal-path="/shop?category=vga-cards"
-            class="bento-card bento-span-7"
-            data-tilt-3d
-          >
-            <img src="assets/lab-gpu-install.jpg" alt="Graphics card installation in ESD-safe lab" class="bento-media" />
+          <a href="https://aquapcsolutions.yyth.workers.dev/shop?category=vga-cards"
+            data-portal-path="/shop?category=vga-cards" class="bento-card bento-span-7" data-tilt-3d>
+            <img src="assets/lab-gpu-install.jpg" alt="Graphics card installation in ESD-safe lab"
+              class="bento-media" />
             <div class="bento-overlay">
               <span class="bento-kicker">CERTIFIED GRAPHICS CARDS // 06-MONTH WARRANTY</span>
               <h3 class="bento-title">NVIDIA RTX 20 / 30 / 40 &amp; Radeon RX Series</h3>
@@ -347,12 +285,8 @@
           </a>
 
           <!-- Card 2: Cryo Waterblock Macro -->
-          <a
-            href="https://aquapcsolutions.yyth.workers.dev/services#srv-02"
-            data-portal-path="/services"
-            class="bento-card bento-span-5"
-            data-tilt-3d
-          >
+          <a href="https://aquapcsolutions.yyth.workers.dev/services#srv-02" data-portal-path="/services"
+            class="bento-card bento-span-5" data-tilt-3d>
             <img src="assets/cooling-loop.jpg" alt="Custom liquid cooling hardline loop" class="bento-media" />
             <div class="bento-overlay">
               <span class="bento-kicker">HYDRO THERMAL LAB // CUSTOM LOOPS</span>
@@ -364,12 +298,8 @@
           </a>
 
           <!-- Card 3: Micro-Soldering Repair Photo -->
-          <a
-            href="https://aquapcsolutions.yyth.workers.dev/services#srv-01"
-            data-portal-path="/services"
-            class="bento-card bento-span-4"
-            data-tilt-3d
-          >
+          <a href="https://aquapcsolutions.yyth.workers.dev/services#srv-01" data-portal-path="/services"
+            class="bento-card bento-span-4" data-tilt-3d>
             <img src="assets/micro-solder.jpg" alt="Board-level micro-soldering repair" class="bento-media" />
             <div class="bento-overlay">
               <span class="bento-kicker">MICRO-PRECISION DIAGNOSTICS</span>
@@ -381,12 +311,8 @@
           </a>
 
           <!-- Card 4: DDR5 RGB Macro Photo -->
-          <a
-            href="https://aquapcsolutions.yyth.workers.dev/shop?category=ram"
-            data-portal-path="/shop?category=ram"
-            class="bento-card bento-span-4"
-            data-tilt-3d
-          >
+          <a href="https://aquapcsolutions.yyth.workers.dev/shop?category=ram" data-portal-path="/shop?category=ram"
+            class="bento-card bento-span-4" data-tilt-3d>
             <img src="assets/rgb-ram-macro.jpg" alt="DDR5 RGB Memory modules" class="bento-media" />
             <div class="bento-overlay">
               <span class="bento-kicker">MEMORY &amp; STORAGE</span>
@@ -398,20 +324,9 @@
           </a>
 
           <!-- Card 5: Live Looping Circuit Board Video Card -->
-          <a
-            href="https://aquapcsolutions.yyth.workers.dev/shop?category=motherboards"
-            data-portal-path="/shop?category=motherboards"
-            class="bento-card bento-span-4"
-            data-tilt-3d
-          >
-            <video
-              src="assets/video/circuit-board.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              class="bento-media"
-            ></video>
+          <a href="https://aquapcsolutions.yyth.workers.dev/shop?category=motherboards"
+            data-portal-path="/shop?category=motherboards" class="bento-card bento-span-4" data-tilt-3d>
+            <video src="assets/video/circuit-board.mp4" autoplay muted loop playsinline class="bento-media"></video>
             <div class="bento-overlay">
               <span class="bento-kicker">MOTHERBOARDS &amp; PROCESSORS</span>
               <h3 class="bento-title">Intel G41–Z790 &amp; AMD AM4 / AM5</h3>
@@ -461,7 +376,8 @@
             </div>
           </a>
 
-          <a href="https://aquapcparts.pages.dev/" data-portal-path="https://aquapcparts.pages.dev/" class="portal-card" data-tilt-3d>
+          <a href="https://aquapcparts.pages.dev/" data-portal-path="https://aquapcparts.pages.dev/" class="portal-card"
+            data-tilt-3d>
             <div>
               <div class="portal-card-top">
                 <div class="portal-icon-box"><span class="material-symbols-outlined">shopping_bag</span></div>
@@ -469,7 +385,8 @@
               </div>
               <h3 class="portal-card-title">390+ Hardware Catalog</h3>
               <p class="portal-card-desc">
-                Browse Processors, VGA Cards, Motherboards, RAM, SSDs, Power Supplies, Brand New Gear, and Frameless IPS Monitors.
+                Browse Processors, VGA Cards, Motherboards, RAM, SSDs, Power Supplies, Brand New Gear, and Frameless IPS
+                Monitors.
               </p>
             </div>
             <div class="portal-card-footer">
@@ -478,7 +395,8 @@
             </div>
           </a>
 
-          <a href="https://aquapcsolutions.yyth.workers.dev/services" data-portal-path="/services" class="portal-card" data-tilt-3d>
+          <a href="https://aquapcsolutions.yyth.workers.dev/services" data-portal-path="/services" class="portal-card"
+            data-tilt-3d>
             <div>
               <div class="portal-card-top">
                 <div class="portal-icon-box"><span class="material-symbols-outlined">build_circle</span></div>
@@ -495,7 +413,8 @@
             </div>
           </a>
 
-          <a href="https://aquapcsolutions.yyth.workers.dev/pricing" data-portal-path="/pricing" class="portal-card" data-tilt-3d>
+          <a href="https://aquapcsolutions.yyth.workers.dev/pricing" data-portal-path="/pricing" class="portal-card"
+            data-tilt-3d>
             <div>
               <div class="portal-card-top">
                 <div class="portal-icon-box"><span class="material-symbols-outlined">request_quote</span></div>
@@ -512,7 +431,8 @@
             </div>
           </a>
 
-          <a href="https://aquapcsolutions.yyth.workers.dev/about" data-portal-path="/about" class="portal-card" data-tilt-3d>
+          <a href="https://aquapcsolutions.yyth.workers.dev/about" data-portal-path="/about" class="portal-card"
+            data-tilt-3d>
             <div>
               <div class="portal-card-top">
                 <div class="portal-icon-box"><span class="material-symbols-outlined">verified_user</span></div>
@@ -529,7 +449,8 @@
             </div>
           </a>
 
-          <a href="https://aquapcsolutions.yyth.workers.dev/contact" data-portal-path="/contact" class="portal-card" data-tilt-3d>
+          <a href="https://aquapcsolutions.yyth.workers.dev/contact" data-portal-path="/contact" class="portal-card"
+            data-tilt-3d>
             <div>
               <div class="portal-card-top">
                 <div class="portal-icon-box"><span class="material-symbols-outlined">support_agent</span></div>
@@ -568,23 +489,27 @@
           </div>
 
           <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: flex-end">
-            <a
-              href="https://aquapcsolutions.yyth.workers.dev/"
-              data-portal-path="/"
-              class="btn-primary-warp"
-            >
+            <a href="https://aquapcsolutions.yyth.workers.dev/" data-portal-path="/" class="btn-primary-warp">
               <span>LAUNCH MAIN WEBSITE</span>
               <span class="material-symbols-outlined">rocket_launch</span>
             </a>
 
-            <a
-              href="https://wa.me/message/CYZRQDEHLIRZF1"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-secondary-glass"
-            >
+            <a href="https://wa.me/message/CYZRQDEHLIRZF1" target="_blank" rel="noopener noreferrer"
+              class="btn-secondary-glass">
               <span class="material-symbols-outlined" style="color: var(--teal)">chat</span>
               <span>24/7 WHATSAPP DESK</span>
+            </a>
+
+            <a href="https://www.facebook.com/aquapcsolutions" target="_blank" rel="noopener noreferrer"
+              class="btn-secondary-glass">
+              <span class="material-symbols-outlined" style="color: #1877f2">groups</span>
+              <span>FACEBOOK PAGE</span>
+            </a>
+
+            <a href="https://www.instagram.com/aquapcsolutions/" target="_blank" rel="noopener noreferrer"
+              class="btn-secondary-glass">
+              <span class="material-symbols-outlined" style="color: #e1306c">photo_camera</span>
+              <span>INSTAGRAM</span>
             </a>
           </div>
         </div>
@@ -593,10 +518,8 @@
   </main>
 
   <footer class="portal-footer">
-    <div
-      class="section-container"
-      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem"
-    >
+    <div class="section-container"
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem">
       <div>
         <strong>AQUA PC SOLUTIONS</strong> · Interactive 3D PC Builder &amp; Official Launch Portal
       </div>
@@ -604,12 +527,18 @@
         <a href="https://aquapcparts.pages.dev/" style="color: var(--teal); text-decoration: none; margin-right: 1rem">
           Aqua PC Parts Store &#8599;
         </a>
+        <a href="https://aquapcparts.pages.dev/contact.html" style="color: var(--cyan); text-decoration: none; margin-right: 1rem">
+          Parts Contact
+        </a>
+        <a href="https://www.facebook.com/aquapcsolutions" target="_blank" rel="noopener" style="color: #1877f2; text-decoration: none; margin-right: 1rem">
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/aquapcsolutions/" target="_blank" rel="noopener" style="color: #e1306c; text-decoration: none; margin-right: 1rem">
+          Instagram
+        </a>
         Destination:
-        <a
-          href="https://aquapcsolutions.yyth.workers.dev/"
-          data-portal-path="/"
-          style="color: var(--cyan); text-decoration: none"
-        >
+        <a href="https://aquapcsolutions.yyth.workers.dev/" data-portal-path="/"
+          style="color: var(--cyan); text-decoration: none">
           https://aquapcsolutions.yyth.workers.dev/
         </a>
       </div>
@@ -621,4 +550,5 @@
   <script src="scene3d.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
